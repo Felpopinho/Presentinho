@@ -272,6 +272,7 @@ main{
     font-weight: bold;
     background: transparent;
     border: solid 3px;
+    margin: 20px;
 }
 .foto{
     width: 100%;
@@ -632,5 +633,22 @@ main{
     }
     .parabensTitulo, .parabensDesc{
         transform: scale(0.8);
+        text-align: center;
+    }
+    .tituloDates{
+        transform: scale(0.9);
+        text-align: center;
+    }
+}
+@media screen and (max-width: 800px) and (min-width: 0){
+    .sliderContainer{
+        width: 400px;
+    }
+    .imagemUm{
+        width: 400px;
+    }
+    .parabensTitulo, .parabensDesc{
+        transform: scale(0.7);
+        text-align: center;
     }
 }

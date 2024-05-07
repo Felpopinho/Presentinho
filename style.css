@@ -642,7 +642,7 @@ main{
 }
 @media screen and (max-width: 800px) and (min-width: 0){
     .sliderContainer{
-        width: 400px;
+        width: 500px;
     }
     .imagemUm{
         width: 400px;
@@ -659,5 +659,8 @@ main{
         transform: scale(0.7);
     } .descTres{
         width: 100%;
+    }
+    .date{
+        transform: scale(0.8);
     }
 }

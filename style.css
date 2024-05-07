@@ -651,4 +651,13 @@ main{
         transform: scale(0.7);
         text-align: center;
     }
+    .Paragrafo{
+        width: 95%;
+        height: auto;
+    }
+    .tituloTres, .descTres{
+        transform: scale(0.7);
+    } .descTres{
+        width: 100%;
+    }
 }

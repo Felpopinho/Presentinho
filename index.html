@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para meu amor</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <div id="felizAniversario">
+            <h1>Feliz aniversáriooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo!</h1>
+        </div>
+        <div class="headerContainer">
+            <div class="headerSlider">
+                <p>Linda!</p>
+                <p>Maravilhosa!</p>
+                <p>Perfeita!</p>
+                <p>Bonita!</p>
+                <p>Totosa!</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="primeiraPergunta">
+            <h1 class="texto">Ola meu bem! Primeiramente, como você está?</h1>
+            <div class="form">
+                <div class="input">
+                    <label>Bem</label>
+                    <input type="radio" name="Question" id="bem" onclick="addClass(1)">
+                </div>
+                <div class="input">
+                    <input type="radio" name="Question" id="mal" onclick="addClass(2)">
+                    <label>Mal</label>
+                </div>
+                <button onclick="enviarResposta(1)" class="button">Enviar</button>
+            </div>
+        </section>
+        <section id="primeiroResultado">
+            <h1 class="texto">Que bom amor! Eu também estou bem</h1>
+            <button onclick="proximaPergunta(1)" class="button">Proximo</button>
+        </section>
+        <section id="segundoResultado">
+            <h1 class="texto">Que pena amor &#41;: espero que isso te deixar melhor &lt;3</h1>
+            <button onclick="proximaPergunta(1)" class="button">Proximo</button>
+        </section>
+        <section id="segundaPergunta">
+            <h1 class="texto">Vejo que hoje é um dia especial, estou certo?</h1>
+            <div class="form">
+                <div class="input">
+                    <label>Sim</label>
+                    <input type="radio" name="Question" id="sim" onclick="addClass(3)">
+                </div>
+                <div class="input">
+                    <input type="radio" name="Question" id="nao" onclick="addClass(4)">
+                    <label>Não</label>
+                </div>
+                <button onclick="enviarResposta(2)" class="button">Enviar</button>
+            </div>
+        </section>
+        <section id="terceiroResultado">
+            <h1 class="texto">Hummm, acho que alguém está completando 15 anos de existência!</h1>
+            <button onclick="proximaPergunta(2)" class="button">Proximo</button>
+        </section>
+        <section id="quartoResultado">
+            <h1 class="texto">Ué, podia jurar ser seu aniversário hoje</h1>
+            <button onclick="proximaPergunta(2)" class="button">Proximo</button>
+        </section>
+        <section id="terceiraPergunta">
+            <h1 class="texto">Enfim, preparada para a surpresa?</h1>
+            <div class="form">
+                <div class="input">
+                    <label>Claro</label>
+                    <input type="radio" name="Question" id="vamos" onclick="addClass(5)">
+                </div>
+                <div class="input">
+                    <input type="radio" name="Question" id="calma" onclick="addClass(6)">
+                    <label>Calma</label>
+                </div>
+                <button onclick="enviarResposta(3)" class="button">Enviar</button>
+            </div>
+        </section>
+        <section id="quintoResultado">
+            <h1 class="texto">Então... vamos lá</h1>
+            <button onclick="proximaPergunta(3)" class="button">Proximo</button>
+        </section>
+        <section id="sextoResultado">
+            <h1 class="texto">Quando quiser...</h1>
+            <button onclick="proximaPergunta(3)" class="button">Proximo</button>
+        </section>
+
+        <section id="surpresa">
+            <div class="sessaoUm">
+                <div class="moldes">
+                    <div class="molde1"></div>
+                      <div class="molde2"></div>
+                </div>
+                <div class="imagemUm"></div>
+                <div class="parabensContainer">
+                    <h1 class="parabensTitulo">PARABÉNS PELOS 15 ANOS</h1>
+                    <p class="parabensDesc">- E que venha muitos outros por ai -</p>
+                </div>
+                <h1 class="tituloDates">Vamos relembrar alguns momentos juntos?</h1>
+            </div>
+            <div class="sessaoDois">
+                <div class="dateUm date">
+                    <div class="dateDesc">
+                        <h1>Primeiro date:</h1>
+                        <p>Primeira vez que saimos juntos, eu estava muito feliz, mas muito preocupado!</p>
+                    </div>
+                    <div class="sliderContainer">
+                        <button class="sliderButton" onclick="mudarImagem(1)">&lt;</button>
+                        <div class="slider">
+                            <div class="foto foto1" id="foto1"></div>   
+                            <div class="foto foto1" id="foto2"></div> 
+                            <div class="foto foto1" id="foto3"></div> 
+                            <div class="foto foto1" id="foto4"></div> 
+                        </div>
+                        <button class="sliderButton" onclick="mudarImagem(2)">&gt;</button>
+                    </div>
+                </div>
+                <div class="dateDois date">
+                    <div class="dateDesc">
+                        <h1>Segundo date:</h1>
+                        <p>Te levei aqui em casa mais algumas vezes, mas nem sempre tivemos tempo para tirar as fotos</p>
+                    </div>
+                    <div class="sliderContainer">
+                        <button class="sliderButton" onclick="mudarImagem(3)">&lt;</button>
+                        <div class="slider">
+                            <div class="foto foto2" id="foto5"></div>   
+                            <div class="foto foto2" id="foto6"></div> 
+                            <div class="foto foto2" id="foto7"></div> 
+                        </div>
+                        <button class="sliderButton" onclick="mudarImagem(4)">&gt;</button>
+                    </div>
+                </div>
+                <div class="dateTres date">
+                    <div class="dateDesc">
+                        <h1>Terceiro date:</h1>
+                        <p>Fomos pela primeira vez ao shopping e ao parque! Foi muito legal, é muito bom estar do seu lado</p>
+                    </div>
+                    <div class="sliderContainer">
+                        <button class="sliderButton" onclick="mudarImagem(5)">&lt;</button>
+                        <div class="slider">
+                            <div class="foto foto3" id="foto8"></div>   
+                            <div class="foto foto3" id="foto9"></div> 
+                            <div class="foto foto3" id="foto10"></div> 
+                            <div class="foto foto3" id="foto11"></div> 
+                            <div class="foto foto3" id="foto12"></div> 
+                            <div class="foto foto3" id="foto13"></div> 
+                            <div class="foto foto3" id="foto14"></div> 
+                            <div class="foto foto3" id="foto15"></div> 
+                        </div>
+                        <button class="sliderButton" onclick="mudarImagem(6)">&gt;</button>
+                    </div>
+                </div>
+                <div class="dateQuatro date">
+                    <div class="dateDesc">
+                        <h1>Quarto date:</h1>
+                        <p>Você veio aqui em casa e fizemos muita sacanagem heheheheh! Brincadeira, é sempre muito bom te levar aqui</p>
+                    </div>
+                    <div class="sliderContainer">
+                        <button class="sliderButton" onclick="mudarImagem(7)">&lt;</button>
+                        <div class="slider">
+                            <div class="foto foto4" id="foto16"></div>   
+                            <div class="foto foto4" id="foto17"></div> 
+                            <div class="foto foto4" id="foto18"></div> 
+                        </div>
+                        <button class="sliderButton" onclick="mudarImagem(8)">&gt;</button>
+                    </div>
+                </div>
+                <div class="dateCinco date">
+                    <div class="dateDesc">
+                        <h1>Quinto date:</h1>
+                        <p>Saimos apenas para andar por ai, tinhamos pouquissimo tempo, e mesmo assim foi inesquecivel</p>
+                    </div>
+                    <div class="sliderContainer">
+                        <button class="sliderButton" onclick="mudarImagem(9)">&lt;</button>
+                        <div class="slider">
+                            <div class="foto foto5" id="foto19"></div> 
+                            <div class="foto foto5" id="foto20"></div> 
+                            <div class="foto foto5" id="foto21"></div> 
+                            <div class="foto foto5" id="foto22"></div> 
+                            <div class="foto foto5" id="foto23"></div>
+                            <div class="foto foto5" id="foto24"></div>
+                            <div class="foto foto5" id="foto25"></div>
+                            <div class="foto foto5" id="foto26"></div>
+                            <div class="foto foto5" id="foto27"></div>
+                            <div class="foto foto5" id="foto28"></div>
+                            <div class="foto foto5" id="foto29"></div>
+                            <div class="foto foto5" id="foto30"></div>
+                            <div class="foto foto5" id="foto31"></div>
+                            <div class="foto foto5" id="foto32"></div>
+                            <div class="foto foto5" id="foto33"></div>
+                            <div class="foto foto5" id="foto34"></div>
+                            <div class="foto foto5" id="foto35"></div>
+                            <div class="foto foto5" id="foto36"></div>
+                            <div class="foto foto5" id="foto37"></div>
+                        </div>
+                        <button class="sliderButton" onclick="mudarImagem(10)">&gt;</button>
+                    </div>
+                </div>
+                <div class="dateSeis date">
+                    <div class="dateDesc">
+                        <h1>Sexto date</h1>
+                        <p>Saimos para o shopping e o parque novamente! Mas dessa vez eu provei sushi :O, é muito bom obrigado amor!</p>
+                    </div>
+                    <div class="sliderContainer">
+                        <button class="sliderButton" onclick="mudarImagem(11)">&lt;</button>
+                        <div class="slider">
+                            <div class="foto foto6" id="foto38"></div> 
+                            <div class="foto foto6" id="foto39"></div> 
+                            <div class="foto foto6" id="foto40"></div> 
+                            <div class="foto foto6" id="foto41"></div> 
+                            <div class="foto foto6" id="foto42"></div>
+                            <div class="foto foto6" id="foto43"></div>
+                            <div class="foto foto6" id="foto44"></div>
+                            <div class="foto foto6" id="foto45"></div>
+                            <div class="foto foto6" id="foto46"></div>
+                            <div class="foto foto6" id="foto47"></div>
+                            <div class="foto foto6" id="foto48"></div>
+                            <div class="foto foto6" id="foto49"></div>
+                            <div class="foto foto6" id="foto50"></div>
+                            <div class="foto foto6" id="foto51"></div>
+                            <div class="foto foto6" id="foto52"></div>
+                            <div class="foto foto6" id="foto53"></div>
+                            <div class="foto foto6" id="foto54"></div>
+                            <div class="foto foto6" id="foto55"></div>
+                            <div class="foto foto6" id="foto56"></div>
+                            <div class="foto foto6" id="foto57"></div>
+                            <div class="foto foto6" id="foto58"></div>
+                            <div class="foto foto6" id="foto59"></div>
+                            <div class="foto foto6" id="foto60"></div>
+                            <div class="foto foto6" id="foto61"></div>
+                        </div>
+                        <button class="sliderButton" onclick="mudarImagem(12)">&gt;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="sessaoTres" id="sessaoTres">
+                <div class="Paragrafo">
+                    <h1 class="tituloTres">Muito bom rever nossas fotos né, mas o mais importante de tudo é que a gente fique juntos por muitos outros aniversários hihi.</h1>
+                    <p class="descTres">Por fim, eu queria te parabenizar novamente por ser desse jeitinho que você é, eu amo seu cabelo, amo seu corpo, amo seus olhos, amo seu estilo, amo sua personalidade, amo seu sorriso, amo sua risada... Eu amo você</p>
+                </div>
+                <button class="botaoEuteamo" onclick="euTeAmo()">Eu te amo</button>
+            </div>
+        </section>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html> 

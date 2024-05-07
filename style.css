@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Loved+by+the+King&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(0.1turn,#804c59, #613b86);
+}
+
+header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3d2852;
+    flex-direction: column;
+    position: fixed;
+    z-index: 1000;
+}
+
+.headerContainer{
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.headerSlider{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200%;
+    position: absolute;
+    left: 100%;
+    animation: slider 25s linear 0s infinite forwards;
+}
+.headerSlider p{
+    font-size: 1.5rem;
+    color: white;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(-0%);
+    } 100%{
+        transform: translateX(-200%);
+    }
+}
+
+#felizAniversario{
+    display: none;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+}
+#felizAniversario h1{
+    color: white;
+    filter: drop-shadow(white 0px 0px 2px);
+}
+
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#primeiraPergunta{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#primeiroResultado, #segundoResultado, #terceiroResultado, #quartoResultado, #quintoResultado, #sextoResultado{
+    display: none;
+    height: 50%;
+    align-items: center;
+    flex-direction: column;
+}
+#segundaPergunta, #terceiraPergunta{
+    display: none;
+    height: 50%;
+    flex-direction: column;
+    align-items: center;
+}
+.texto{
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 300px;
+    place-items: center;
+    padding: 10px;
+    background-color: rgb(51, 51, 51);
+    border-radius: 10px;
+}
+.input{
+    display: flex;
+}
+.input label{
+    font-size: 1.5rem;
+    color: white;
+}
+.input input{
+    margin: 0 5px 0 5px;
+    width: 20px;
+}
+.button{
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    border-radius: 10px;
+    border: 0;
+    grid-column: 1/3;
+    background: linear-gradient(0.8turn,#c49fa8, #b59ecc);
+    color: rgb(51, 51, 51);
+    font-size: 1.8rem;
+    font-weight: bold;
+    transition: all 0.2s linear;
+    box-shadow: 2px 0px 10px rgb(26, 26, 26);
+}
+.button:hover{
+    color: white;
+}
+.button:active{
+    box-shadow: 0px 0px black;
+    filter: drop-shadow(#b59ecc 0px 0px 5px);
+}
+
+#surpresa{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.sessaoUm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+.parabensTitulo{
+    font-size: 3rem;
+    font-weight: 900;
+    color: #ffffff;
+    filter: drop-shadow(#ffc4e4 0 0 3px);
+}
+.parabensDesc{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    filter: drop-shadow(#ffc4e4 0 0 3px);
+    font-size: 1.2rem;
+}
+.imagemUm{
+    width: 50%;
+    height: 300px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 30px;
+    background-image: url("./Imagens/imagem1.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(50%) opacity(90%);
+}
+.moldes{
+    width: 50%;
+    height: 600px;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.molde1,.molde2{
+    width: 300px;
+    height: 200px;
+    background-image: url("./Imagens/coracao.png");
+    background-size: cover;
+    background-position: center;
+    filter: invert(100%) drop-shadow(#ffc4e4 0 0 3px) opacity(50%);
+} .molde1{
+    transform: rotate(30deg);
+} .molde2{
+    transform: rotate(-30deg);
+}
+.parabensContainer{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tituloDates{
+    font-size: 3rem;
+    color: white;
+    align-self: flex-end;
+    position: absolute;
+}
+.sessaoDois{
+    height: 515vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.date{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.dateDesc{
+    margin-bottom: 5vh;
+}
+.dateDesc h1{
+    font-size: 2.5rem;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+.dateDesc p{
+    font-size: 1.5rem;
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+.sliderContainer{
+    width: 60%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slider{
+    width: 85%;
+    height: 100%;
+    overflow: hidden;
+    display: inline;
+    position: relative;
+    border-radius: 20px;
+}
+.sliderButton{
+    width: 50px;
+    height: 47px;
+    border: 0;
+    border-radius: 40%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: transparent;
+    border: solid 3px;
+}
+.foto{
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0b070f;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+    position: absolute;
+}
+#foto1{
+    background-image: url("./Imagens/1-primeiro.jpg");
+    left: 0%;
+}#foto2{
+    background-image: url("./Imagens/2-primeiro.jpg");
+    left: 100%;
+}#foto3{
+    background-image: url("./Imagens/3-primeiro.jpg");
+    left: 200%;
+}#foto4{
+    background-image: url("./Imagens/4-primeiro.jpg");
+    left: 300%;
+}#foto5{
+    background-image: url("./Imagens/1-segundo.jpg");
+    left: 0%;
+} #foto6{
+    background-image: url("./Imagens/2-segundo.jpg");
+    left: 100%;
+} #foto7{
+    background-image: url("./Imagens/3-segundo.jpg");
+    left: 200%;
+} 
+#foto8{
+    background-image: url("./Imagens/1-terceiro.jpg");
+    left: 0%;
+}
+#foto9{
+    background-image: url("./Imagens/2-terceiro.jpg");
+    left: 100%;
+}
+#foto10{
+    background-image: url("./Imagens/3-terceiro.jpg");
+    left: 200%;
+}
+#foto11{
+    background-image: url("./Imagens/4-terceiro.jpg");
+    left: 300%;
+}
+#foto12{
+    background-image: url("./Imagens/5-terceiro.jpg");
+    left: 400%;
+}
+#foto13{
+    background-image: url("./Imagens/6-terceiro.jpg");
+    left: 500%;
+}
+#foto14{
+    background-image: url("./Imagens/7-terceiro.jpg");
+    left: 600%;
+}
+#foto15{
+    background-image: url("./Imagens/8-terceiro.jpg");
+    left: 700%;
+}
+#foto16{
+    background-image: url("./Imagens/1-quarto.jpg");
+    left: 0%;
+}
+#foto17{
+    background-image: url("./Imagens/2-quarto.jpg");
+    left: 100%;
+}
+#foto18{
+    background-image: url("./Imagens/3-quarto.jpg");
+    left: 200%;
+}
+#foto19{
+    background-image: url("./Imagens/1-quinto.jpg");
+    left: 0%;
+}
+#foto20{
+    background-image: url("./Imagens/2-quinto.jpg");
+    left: 100%;
+}
+#foto21{
+    background-image: url("./Imagens/3-quinto.jpg");
+    left: 200%;
+}
+#foto22{
+    background-image: url("./Imagens/4-quinto.jpg");
+    left: 300%;
+}
+#foto23{
+    background-image: url("./Imagens/5-quinto.jpg");
+    left: 400%;
+}
+#foto24{
+    background-image: url("./Imagens/6-quinto.jpg");
+    left: 500%;
+}
+#foto25{
+    background-image: url("./Imagens/7-quinto.jpg");
+    left: 600%;
+}
+#foto26{
+    background-image: url("./Imagens/8-quinto.jpg");
+    left: 700%;
+}
+#foto27{
+    background-image: url("./Imagens/9-quinto.jpg");
+    left: 800%;
+}
+#foto28{
+    background-image: url("./Imagens/10-quinto.jpg");
+    left: 900%;
+}
+#foto29{
+    background-image: url("./Imagens/11-quinto.jpg");
+    left: 1000%;
+}
+#foto30{
+    background-image: url("./Imagens/12-quinto.jpg");
+    left: 1100%;
+}
+#foto31{
+    background-image: url("./Imagens/13-quinto.jpg");
+    left: 1200%;
+}
+#foto32{
+    background-image: url("./Imagens/14-quinto.jpg");
+    left: 1300%;
+}
+#foto33{
+    background-image: url("./Imagens/15-quinto.jpg");
+    left: 1400%;
+}
+#foto34{
+    background-image: url("./Imagens/16-quinto.jpg");
+    left: 1500%;
+}
+#foto35{
+    background-image: url("./Imagens/17-quinto.jpg");
+    left: 1600%;
+}
+#foto36{
+    background-image: url("./Imagens/18-quinto.jpg");
+    left: 1700%;
+}
+#foto37{
+    background-image: url("./Imagens/19-quinto.jpg");
+    left: 1800%;
+}
+#foto38{
+    background-image: url("./Imagens/1-sexto.jpg");
+    left: 0%;
+}
+#foto39{
+    background-image: url("./Imagens/2-sexto.jpg");
+    left: 100%;
+}
+#foto40{
+    background-image: url("./Imagens/3-sexto.jpg");
+    left: 200%;
+}
+#foto41{
+    background-image: url("./Imagens/4-sexto.jpg");
+    left: 300%;
+}
+#foto42{
+    background-image: url("./Imagens/5-sexto.jpg");
+    left: 400%;
+}
+#foto43{
+    background-image: url("./Imagens/6-sexto.jpg");
+    left: 500%;
+}
+#foto44{
+    background-image: url("./Imagens/7-sexto.jpg");
+    left: 600%;
+}
+#foto45{
+    background-image: url("./Imagens/8-sexto.jpg");
+    left: 700%;
+}
+#foto46{
+    background-image: url("./Imagens/9-sexto.jpg");
+    left: 800%;
+}
+#foto47{
+    background-image: url("./Imagens/10-sexto.jpg");
+    left: 900%;
+}
+#foto48{
+    background-image: url("./Imagens/11-sexto.jpg");
+    left: 1000%;
+}
+#foto49{
+    background-image: url("./Imagens/12-sexto.jpg");
+    left: 1100%;
+}
+#foto50{
+    background-image: url("./Imagens/13-sexto.jpg");
+    left: 1200%;
+}
+#foto51{
+    background-image: url("./Imagens/14-sexto.jpg");
+    left: 1300%;
+}
+#foto52{
+    background-image: url("./Imagens/15-sexto.jpg");
+    left: 1400%;
+}
+#foto53{
+    background-image: url("./Imagens/16-sexto.jpg");
+    left: 1500%;
+}
+#foto54{
+    background-image: url("./Imagens/17-sexto.jpg");
+    left: 1600%;
+}
+#foto55{
+    background-image: url("./Imagens/18-sexto.jpg");
+    left: 1700%;
+}
+#foto56{
+    background-image: url("./Imagens/19-sexto.jpg");
+    left: 1800%;
+}
+#foto57{
+    background-image: url("./Imagens/20-sexto.jpg");
+    left: 1900%;
+}
+#foto58{
+    background-image: url("./Imagens/21-sexto.jpg");
+    left: 2000%;
+}
+#foto59{
+    background-image: url("./Imagens/22-sexto.jpg");
+    left: 2100%;
+}
+#foto60{
+    background-image: url("./Imagens/23-sexto.jpg");
+    left: 2200%;
+}
+#foto61{
+    background-image: url("./Imagens/24-sexto.jpg");
+    left: 2300%;
+}
+
+.sessaoTres{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+.tituloTres{
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 100%;
+}
+.descTres{
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    width: 80%;
+    font-weight: 500;
+}
+.Paragrafo{
+    width: 80%;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.botaoEuteamo{
+    border: 0;
+    width: 150px;
+    height: 70px;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #804c59;
+    box-shadow: 0px 5px 0px rgb(65, 65, 65);
+    filter: drop-shadow(rgba(0, 0, 0, 0.459) 0px 5px 5px);
+    transition: all 0.2s linear;
+}
+.botaoEuteamo:active{
+    box-shadow: inset 0px 3px 0px rgb(65, 65, 65);
+}
+.teAmo{
+    position: absolute;
+    top: 673vh;
+    animation: teAmo 40s linear 0s 1 forwards;
+    height: 20vh;
+    z-index: 999;
+    color: rgb(203, 177, 228);
+    font-weight: bold;
+    font-size: 1.5rem;
+    filter: drop-shadow(rgb(106, 52, 156) 0px 0px 5px);
+    user-select: none;
+}
+.coracaoAmor1,.coracaoAmor2{
+    position: absolute;
+    top: 700vh;
+    width: 90px;
+    filter: invert(100%) opacity(60%) drop-shadow(rgb(106, 52, 156) 0px 0px 5px);
+}
+.coracaoAmor1{
+    align-self: flex-start;
+    left: 45%;
+    animation: corasao 15s linear 0s 1 forwards;
+}
+.coracaoAmor2{
+    align-self: flex-end;
+    right: 45%;
+    animation: corasao2 15s linear 0s 1 forwards;
+}
+@keyframes teAmo {
+    0%{
+        transform: translateY(0%);
+    } 10%{
+        transform: translateY(-350%) scale(1.5);
+    } 100%{
+        transform: translateY(-3500%) scale(2);
+    }
+}
+@keyframes corasao {
+    0%{
+        transform: translateY(0%);
+    } 10%{
+        transform: translateY(-350%) translateX(-70%) scale(1.5) rotate(-10deg);
+    } 100%{
+        transform: translateY(-3500%) translateX(-700%) scale(2) rotate(-100deg);
+    }
+}
+@keyframes corasao2 {
+    0%{
+        transform: translateY(0%);
+    } 10%{
+        transform: translateY(-350%) translateX(70%) scale(1.5) rotate(10deg);
+    } 100%{
+        transform: translateY(-3500%) translateX(700%) scale(2) rotate(100deg);
+    }
+}

@@ -663,4 +663,11 @@ main{
     .date{
         transform: scale(0.8);
     }
+    .moldes{
+        width: 80%;
+    }
+    .molde1,.molde2{
+        width: 200px;
+        height: 100px;
+    }
 }

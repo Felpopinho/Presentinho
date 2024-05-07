@@ -172,7 +172,7 @@ main{
     font-size: 1.2rem;
 }
 .imagemUm{
-    width: 50%;
+    width: 1000px;
     height: 300px;
     position: absolute;
     z-index: 1;
@@ -249,7 +249,7 @@ main{
     text-align: center;
 }
 .sliderContainer{
-    width: 60%;
+    width: 1000px;
     height: 60vh;
     display: flex;
     align-items: center;
@@ -620,5 +620,17 @@ main{
         transform: translateY(-350%) translateX(70%) scale(1.5) rotate(10deg);
     } 100%{
         transform: translateY(-3500%) translateX(700%) scale(2) rotate(100deg);
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 0){
+    .sliderContainer{
+        width: 600px;
+    }
+    .imagemUm{
+        width: 600px;
+    }
+    .parabensTitulo, .parabensDesc{
+        transform: scale(0.8);
     }
 }

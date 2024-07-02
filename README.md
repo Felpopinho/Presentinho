@@ -1,3 +1,3 @@
-<h1>Um simples presente de aniversário que eu fiz para minha namorada.</h1>
+<h1>A simple birthday gift that I made for my girlfriend..</h1>
 
-Utilizando apenas JavaScript, HTML e CSS
+Using just JavaScript, HTML, and CSS
